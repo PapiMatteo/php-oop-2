@@ -44,7 +44,19 @@ class Product
 
     public function get_price()
     {
-        return $this->price;
+        return number_format($this->price, 2);
+    }
+    
+    public function get_categories()
+    {
+        return $this->categories;
+    }
+
+    
+
+    public function get_info()
+    {
+        return "Title: {$this->get_title()}, Price: {$this->get_price()}, Image: {$this->get_image()}";
     }
 
 }
