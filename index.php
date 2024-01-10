@@ -40,7 +40,14 @@ $products = [
 $categories = [
     $cat1,
     $cat2
-]
+];
+
+try{
+    $prod1->set_weight(-10);
+    echo $prod1->weight . 'Kg';
+} catch (Exeption $e) {
+    return $e->get_message();
+}
 
 ?>
 

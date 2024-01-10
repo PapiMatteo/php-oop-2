@@ -1,13 +1,15 @@
 <?php
 
 require_once __DIR__ . '/Category.php';
-// require_once __DIR__ . '/Type.php';
+require_once __DIR__ . '/../Traits/Weight.php';
 
 class Product
 {
+    use Weight;
+
     protected $image;
     protected $title;
-    protected $price;  
+    protected $price;
     public $categories;
 
     public function __construct(Category $_categories)
