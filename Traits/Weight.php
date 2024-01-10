@@ -1,7 +1,7 @@
 <?php
 
 trait Weightable {
-    private $weight;
+    private $weight = 0;
 
     public function setWeight($_weight) {
         if($_weight > 0) {
