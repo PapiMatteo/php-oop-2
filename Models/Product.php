@@ -8,7 +8,7 @@ class Product
     protected $image;
     protected $title;
     protected $price;  
-    protected $categories;
+    public $categories;
 
     public function __construct(Category $_categories)
     {

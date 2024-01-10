@@ -14,18 +14,21 @@ $prod1 = new Food($cat1);
 $prod1->set_title('Prolife Croccantini');
 $prod1->set_image('https://www.prolife-pet.it/media/mod_catalog/items/55/pet-006.jpg');
 $prod1->set_price(10.99);
+$prod1->set_name('Cibo');
 
 $prod2 = new Kennel($cat2);
 $prod2->set_title('Cuccia per gatti, Rossa');
 $prod2->set_image('https://i.etsystatic.com/6497391/r/il/728a61/923513298/il_570xN.923513298_a7uv.jpg');
 $prod2->set_price(25.99);
 $prod2->set_usage('Interni');
+$prod2->set_name('Cuccia');
 
 $prod3 = new Toy($cat1);
 $prod3->set_title('Osso giocattolo');
 $prod3->set_image('https://barf-specialista.it/1554-large/osso-giocattolo.jpg');
 $prod3->set_price(8.99);
 $prod3->set_material('Gomma');
+$prod3->set_name('Giocattolo');
 
 
 $products = [
@@ -33,6 +36,11 @@ $products = [
     $prod2,
     $prod3
 ];
+
+$categories = [
+    $cat1,
+    $cat2
+]
 
 ?>
 
@@ -58,8 +66,9 @@ $products = [
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">
+                                <img src="<?php echo $product->categories->icon ?>" alt=""> 
                             </li>
-                            <li class="list-group-item"></li>
+                            <li class="list-group-item"><?php echo $product->get_name() ?></li>
                         </ul>
                     </div>
                 </div>
